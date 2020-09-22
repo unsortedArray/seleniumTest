@@ -15,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 try:
     INPUT = sys.argv[2]
 except:
-    INPUT = '/drone/src/github.com/unsortedArray/seleniumTest/public/index.html'
+    INPUT = 'file:///drone/src/github.com/unsortedArray/seleniumTest/public/index.html'
     # INPUT = path.join(os.getcwd() , 'public', 'index.html')
 
 print(INPUT)
