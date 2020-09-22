@@ -5,9 +5,9 @@ pipeline:
     - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     - python get-pip.py
     - pip install selenium
+    - apt get install sudo -y
     - sudo mv geckodriver /usr/local/bin
     - sudo mv chromedriver /usr/local/bin
-    - apt get install sudo -y
     - export PATH=$PATH:/usr/local/bin/geckodriver
     - export PATH=$PATH:/usr/local/bin/chromedriver
     -
