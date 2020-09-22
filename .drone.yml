@@ -7,6 +7,7 @@ pipeline:
     - pip install selenium
     - sudo mv geckodriver /usr/local/bin
     - sudo mv chromedriver /usr/local/bin
+    - apt get install sudo -y
     - export PATH=$PATH:/usr/local/bin/geckodriver
     - export PATH=$PATH:/usr/local/bin/chromedriver
     -
