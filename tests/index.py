@@ -15,7 +15,8 @@ from selenium.webdriver.support import expected_conditions as EC
 try:
     INPUT = sys.argv[2]
 except:
-    INPUT = path.join(os.getcwd() , 'public', 'index.html')
+    INPUT = '/drone/src/github.com/unsortedArray/seleniumTest/public/index.html'
+    # INPUT = path.join(os.getcwd() , 'public', 'index.html')
 
 
 NUMBER1_TAG = "number-1"
