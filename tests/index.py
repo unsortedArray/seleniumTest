@@ -11,23 +11,12 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # argument 1 location for webdriver
 # argument 2 location for webdriver
-try:
-    PATH = sys.argv[1]
-except:
-    PATH = "http://selenium:4444/wd/hub"
 
 try:
     INPUT = sys.argv[2]
 except:
     INPUT = path.join(os.getcwd() , 'public', 'index.html')
 
-if not path.exists(INPUT):
-    print("No such input file exists {}".format(INPUT))
-    exit(1)
-
-if not path.exists(INPUT):
-    print("Web driver location incorrect {}".format(INPUT))
-    exit(1)
 
 NUMBER1_TAG = "number-1"
 NUMBER2_TAG = "number-2"
@@ -37,7 +26,9 @@ RESULT_TAG = "result"
 test_case = [[1, 3], [4, 3], [9, 10], [14, 19], [2423321, 3423432432]]
 
 # Chrome drive headless mode donot use gpu graphics gui buffer resource
-driver = webdriver.Chrome(PATH)
+driver = webdriver.Chrome(
+    command_executor="http://selenium:4444/wd/hub"
+)
 driver.get(INPUT)
 
 total_test_cases = test_case.__len__()
