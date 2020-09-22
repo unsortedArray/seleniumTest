@@ -18,6 +18,7 @@ except:
     INPUT = '/drone/src/github.com/unsortedArray/seleniumTest/public/index.html'
     # INPUT = path.join(os.getcwd() , 'public', 'index.html')
 
+print(INPUT)
 
 NUMBER1_TAG = "number-1"
 NUMBER2_TAG = "number-2"
@@ -32,6 +33,7 @@ driver = webdriver.Remote(
     desired_capabilities=caps,
     command_executor="http://selenium:4444/wd/hub"
 )
+
 driver.get(INPUT)
 
 total_test_cases = test_case.__len__()
