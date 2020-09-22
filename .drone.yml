@@ -5,11 +5,6 @@ pipeline:
     - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     - python get-pip.py
     - pip install selenium
-    - su mv geckodriver /usr/local/bin
-    - su mv chromedriver /usr/local/bin
-    - export PATH=$PATH:/usr/local/bin/geckodriver
-    - export PATH=$PATH:/usr/local/bin/chromedriver
-    -
 services:
   selenium:
     image: selenium/hub
