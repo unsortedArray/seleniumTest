@@ -19,7 +19,7 @@ except:
 try:
     INPUT = sys.argv[2]
 except:
-    INPUT = path.join(os.getcwd(), 'Addition', 'public', 'index.html')
+    INPUT = path.join(os.getcwd() , 'public', 'index.html')
 
 if not path.exists(INPUT):
     print("No such input file exists {}".format(INPUT))
